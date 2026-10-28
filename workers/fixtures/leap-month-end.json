@@ -1,0 +1,1 @@
+{"month":"2024-02","as_of":"2024-02-29","monthly_limit_cents":100,"transactions":[{"id":"00000000-0000-0000-0000-000000000001","amount_cents":101,"category":"other","note":"Synthetic boundary","date":"2024-02-29"},{"id":"00000000-0000-0000-0000-000000000002","amount_cents":900,"category":"food","note":"Excluded previous month","date":"2024-01-31"}]}

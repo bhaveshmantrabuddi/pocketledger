@@ -1,0 +1,136 @@
+{
+  "categories": [
+    {
+      "category": "other",
+      "spent_cents": 101,
+      "count": 1
+    }
+  ],
+  "daily": [
+    {
+      "date": "2024-02-01",
+      "spent_cents": 0
+    },
+    {
+      "date": "2024-02-02",
+      "spent_cents": 0
+    },
+    {
+      "date": "2024-02-03",
+      "spent_cents": 0
+    },
+    {
+      "date": "2024-02-04",
+      "spent_cents": 0
+    },
+    {
+      "date": "2024-02-05",
+      "spent_cents": 0
+    },
+    {
+      "date": "2024-02-06",
+      "spent_cents": 0
+    },
+    {
+      "date": "2024-02-07",
+      "spent_cents": 0
+    },
+    {
+      "date": "2024-02-08",
+      "spent_cents": 0
+    },
+    {
+      "date": "2024-02-09",
+      "spent_cents": 0
+    },
+    {
+      "date": "2024-02-10",
+      "spent_cents": 0
+    },
+    {
+      "date": "2024-02-11",
+      "spent_cents": 0
+    },
+    {
+      "date": "2024-02-12",
+      "spent_cents": 0
+    },
+    {
+      "date": "2024-02-13",
+      "spent_cents": 0
+    },
+    {
+      "date": "2024-02-14",
+      "spent_cents": 0
+    },
+    {
+      "date": "2024-02-15",
+      "spent_cents": 0
+    },
+    {
+      "date": "2024-02-16",
+      "spent_cents": 0
+    },
+    {
+      "date": "2024-02-17",
+      "spent_cents": 0
+    },
+    {
+      "date": "2024-02-18",
+      "spent_cents": 0
+    },
+    {
+      "date": "2024-02-19",
+      "spent_cents": 0
+    },
+    {
+      "date": "2024-02-20",
+      "spent_cents": 0
+    },
+    {
+      "date": "2024-02-21",
+      "spent_cents": 0
+    },
+    {
+      "date": "2024-02-22",
+      "spent_cents": 0
+    },
+    {
+      "date": "2024-02-23",
+      "spent_cents": 0
+    },
+    {
+      "date": "2024-02-24",
+      "spent_cents": 0
+    },
+    {
+      "date": "2024-02-25",
+      "spent_cents": 0
+    },
+    {
+      "date": "2024-02-26",
+      "spent_cents": 0
+    },
+    {
+      "date": "2024-02-27",
+      "spent_cents": 0
+    },
+    {
+      "date": "2024-02-28",
+      "spent_cents": 0
+    },
+    {
+      "date": "2024-02-29",
+      "spent_cents": 101
+    }
+  ],
+  "largest": [
+    {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "amount_cents": 101,
+      "category": "other",
+      "note": "Synthetic boundary",
+      "date": "2024-02-29"
+    }
+  ]
+}

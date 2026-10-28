@@ -1,0 +1,59 @@
+name: Apple validation
+run-name: Apple validation - ${{ github.sha }}
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: apple-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  apple:
+    runs-on: macos-15
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Swift and Objective-C behavior tests
+        run: swift test --package-path ios/PocketLedgerKit
+      - name: Generate Xcode project
+        run: |
+          if ! command -v xcodegen >/dev/null; then brew install xcodegen; fi
+          xcodegen generate --spec ios/project.yml
+      - name: Select an installed iPhone simulator
+        id: simulator
+        run: |
+          python3 - <<'PY'
+          import json, os, subprocess
+          devices = json.loads(subprocess.check_output(['xcrun','simctl','list','devices','available','--json']))['devices']
+          candidates = [(runtime, device) for runtime, group in devices.items() if '.iOS-' in runtime for device in group if device.get('isAvailable') and device['name'].startswith('iPhone')]
+          if not candidates:
+              raise SystemExit('No available iPhone simulator')
+          runtime, device = sorted(candidates, key=lambda item: item[0], reverse=True)[0]
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+              output.write('udid=' + device['udid'] + '\n')
+          print(device['name'], runtime, device['udid'])
+          PY
+      - name: Build native app and run offline UI smoke test
+        run: |
+          xcodebuild -project ios/PocketLedger.xcodeproj -scheme PocketLedger \
+            -destination 'platform=iOS Simulator,id=${{ steps.simulator.outputs.udid }}' \
+            -resultBundlePath .local/apple-results.xcresult \
+            -derivedDataPath .local/DerivedData CODE_SIGNING_ALLOWED=NO \
+            test
+      - name: Capture simulator screen and test attachments
+        if: always()
+        run: |
+          mkdir -p .local/apple-artifacts
+          xcrun simctl io '${{ steps.simulator.outputs.udid }}' screenshot .local/apple-artifacts/simulator.png || true
+          if [ -d .local/apple-results.xcresult ]; then
+            xcrun xcresulttool export attachments --path .local/apple-results.xcresult --output-path .local/apple-artifacts/attachments || true
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: apple-validation
+          path: |
+            .local/apple-results.xcresult
+            .local/apple-artifacts
+          retention-days: 7
+          if-no-files-found: ignore

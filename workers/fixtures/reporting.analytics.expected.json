@@ -1,0 +1,128 @@
+{
+  "categories": [
+    {
+      "category": "food",
+      "spent_cents": 1250,
+      "count": 1
+    }
+  ],
+  "daily": [
+    {
+      "date": "2026-10-01",
+      "spent_cents": 0
+    },
+    {
+      "date": "2026-10-02",
+      "spent_cents": 0
+    },
+    {
+      "date": "2026-10-03",
+      "spent_cents": 0
+    },
+    {
+      "date": "2026-10-04",
+      "spent_cents": 0
+    },
+    {
+      "date": "2026-10-05",
+      "spent_cents": 0
+    },
+    {
+      "date": "2026-10-06",
+      "spent_cents": 0
+    },
+    {
+      "date": "2026-10-07",
+      "spent_cents": 0
+    },
+    {
+      "date": "2026-10-08",
+      "spent_cents": 0
+    },
+    {
+      "date": "2026-10-09",
+      "spent_cents": 0
+    },
+    {
+      "date": "2026-10-10",
+      "spent_cents": 0
+    },
+    {
+      "date": "2026-10-11",
+      "spent_cents": 0
+    },
+    {
+      "date": "2026-10-12",
+      "spent_cents": 0
+    },
+    {
+      "date": "2026-10-13",
+      "spent_cents": 0
+    },
+    {
+      "date": "2026-10-14",
+      "spent_cents": 0
+    },
+    {
+      "date": "2026-10-15",
+      "spent_cents": 0
+    },
+    {
+      "date": "2026-10-16",
+      "spent_cents": 0
+    },
+    {
+      "date": "2026-10-17",
+      "spent_cents": 0
+    },
+    {
+      "date": "2026-10-18",
+      "spent_cents": 0
+    },
+    {
+      "date": "2026-10-19",
+      "spent_cents": 0
+    },
+    {
+      "date": "2026-10-20",
+      "spent_cents": 0
+    },
+    {
+      "date": "2026-10-21",
+      "spent_cents": 0
+    },
+    {
+      "date": "2026-10-22",
+      "spent_cents": 0
+    },
+    {
+      "date": "2026-10-23",
+      "spent_cents": 0
+    },
+    {
+      "date": "2026-10-24",
+      "spent_cents": 0
+    },
+    {
+      "date": "2026-10-25",
+      "spent_cents": 0
+    },
+    {
+      "date": "2026-10-26",
+      "spent_cents": 0
+    },
+    {
+      "date": "2026-10-27",
+      "spent_cents": 1250
+    }
+  ],
+  "largest": [
+    {
+      "id": "b5a5bd60-4cec-4297-af3a-c980b7c3b97b",
+      "amount_cents": 1250,
+      "category": "food",
+      "note": "Lunch",
+      "date": "2026-10-27"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+Gradle Wrapper 8.11.1
+
+The Gradle wrapper scripts and bootstrap JAR are redistributed unmodified from
+https://github.com/gradle/gradle/tree/v8.11.1
+under the Apache License, Version 2.0. See LICENSE in this directory.
+The JAR checksum was checked against the official Gradle release checksum.
+This attribution file is supplied by PocketLedger; it is not an upstream NOTICE.

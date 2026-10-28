@@ -1,0 +1,4 @@
+packages: .
+index-state: 2025-09-01T00:00:00Z
+optimization: 2
+tests: True
